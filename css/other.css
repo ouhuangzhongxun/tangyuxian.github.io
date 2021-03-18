@@ -1,0 +1,127 @@
+#nexmoe-header .nexmoe-list .nexmoe-list-item.active {
+  background-color: #e67249;
+  box-shadow: 0 2px 12px #f8e6d8;
+}
+#nexmoe-header .nexmoe-widget-wrap .nexmoe-widget .category-list-count {
+  color: #e67249;
+  background-color: #f8e6d8;
+}
+#nexmoe-header .nexmoe-copyright a {
+  color: #e67249;
+}
+article a {
+  color: #e67249;
+}
+article h2:after {
+  background: #e67249;
+}
+article ol li::before {
+  color: #e67249;
+  background-color: #f8e6d8;
+}
+.nexmoe-archives li::before {
+  background: #e67249;
+}
+.nexmoe-rainbow a:nth-child(7n+1) {
+  background: #f8e6d8;
+  color: #e67249;
+}
+#nexmoe-content .nexmoe-post .nexmoe-py .aplayer {
+  background-image: url("https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/background/papa.jpg");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+#nexmoe-content .nexmoe-post .nexmoe-py p em {
+  color: #e67249;
+  font-size: 17px;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-copyright a {
+  color: #e67249;
+}
+#nexmoe-content .nexmoe-primary .nexmoe-page-nav .current {
+  background: #e67249;
+  box-shadow: 0 2px 12px #f8e6d8;
+}
+#daodream-container .daodream-launcher {
+  right: 60px !important;
+  bottom: 60px !important;
+}
+#daodream-container .daodream-launcher-button {
+  width: 80px !important;
+  height: 80px !important;
+  background-color: #e67249 !important;
+  background-image: url("https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/call.jpg") !important;
+  background-size: 100% 100% !important;
+  border-radius: 50% !important;
+  animation: mybutton 8s;
+}
+@-moz-keyframes mybutton {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes mybutton {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes mybutton {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes mybutton {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .live2d-widget-container {
+    display: none;
+  }
+  #daodream-container .daodream-launcher {
+    right: 20px !important;
+    bottom: 20px !important;
+  }
+  #daodream-container .daodream-launcher-button {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
