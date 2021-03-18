@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <title>vue-生命周期 - 糖羽仙</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="这是一个个人小网站">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg" type="image/png" />
+  <meta name="description" content="总共分为8个阶段：创建前&#x2F;后，载入前&#x2F;后，更新前&#x2F;后，销毁前&#x2F;后。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-生命周期">
+<meta property="og:url" content="https://tangyuxian.com/2021/03/02/%E5%89%8D%E7%AB%AF/vue/vue-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/index.html">
+<meta property="og:site_name" content="糖羽仙">
+<meta property="og:description" content="总共分为8个阶段：创建前&#x2F;后，载入前&#x2F;后，更新前&#x2F;后，销毁前&#x2F;后。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-02T03:41:42.000Z">
+<meta property="article:modified_time" content="2021-03-18T13:21:07.411Z">
+<meta property="article:author" content="tangyuxian">
+<meta property="article:tag" content="vue">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_siu3l2dt15k.css">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1616081258631">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/background/xiaomai.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="tangyuxian" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg" alt="tangyuxian"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="tangyuxian">
+            <img src="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg" alt="tangyuxian" alt="tangyuxian">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>21</div>
+        <div><span>标签</span>8</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-meishi"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-hanbao1"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于糖糖">
+            <i class="mdui-list-item-icon nexmoefont icon-jiubei1"></i>
+            <div class="mdui-list-item-content">
+                关于糖糖
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/friend.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-cola"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:tangyuxian.com" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://github.com/tangyuxian/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/前端/">前端</a>
+          <span class="category-list-count">19</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/开发工具/">开发工具</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/服务器端/">服务器端</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/JavaScript/" style="font-size: 16.67px;">JavaScript</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 13.33px;">微信小程序</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">21</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 tangyuxian
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/tangyuxian/hexo-theme-nexmoe" target="_blank">Nexmoe</a><br/>
+        <a href="http://beian.miit.gov.cn" target="_blank">辽ICP备2021002341号-1</a><br/>
+        <div style="font-size: 12px">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            本站总访问量  <a id="busuanzi_value_site_pv"></a> 次<br />
+            本站访客数<a id="busuanzi_value_site_uv"></a>人次
+        </div>
+        
+    </div>
+
+</div><!-- .nexmoe-drawer -->
+
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 26.666666666666668%;"> 
+          <img data-src="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/post/vue.jpg" data-sizes="auto" alt="vue-生命周期" class="lazyload">
+          <h1>vue-生命周期</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2021年03月02日</a>
+    <a><i class="nexmoefont icon-areachart"></i>691 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+  </div>
+
+  <article>
+    <p>总共分为8个阶段：创建前/后，载入前/后，更新前/后，销毁前/后。</p>
+<span id="more"></span>
+
+<h2 id="分析总结"><a href="#分析总结" class="headerlink" title="分析总结"></a>分析总结</h2><h4 id="1､创建前-后："><a href="#1､创建前-后：" class="headerlink" title="1､创建前/后："></a><strong>1､创建前/后：</strong></h4><h5 id="1-beforeCreate阶段："><a href="#1-beforeCreate阶段：" class="headerlink" title="1) beforeCreate阶段："></a>1) beforeCreate阶段：</h5><p>vue实例的挂载元素el和数据对象data都为undefined，还未初始化。</p>
+<p>说明：在当前阶段data、methods、computed以及watch上的数据和方法都不能被访问。</p>
+<h5 id="2-created阶段："><a href="#2-created阶段：" class="headerlink" title="2) created阶段："></a>2) created阶段：</h5><p>vue实例的数据对象data有了，el还没有。</p>
+<p>说明：可以做一些初始数据的获取，在当前阶段无法与Dom进行交互，如果非要想，可以通过vm.$nextTick来访问Dom。</p>
+<h4 id="2､载入前-后："><a href="#2､载入前-后：" class="headerlink" title="2､载入前/后："></a><strong>2､载入前/后：</strong></h4><h5 id="1-beforeMount阶段："><a href="#1-beforeMount阶段：" class="headerlink" title="1) beforeMount阶段："></a>1) beforeMount阶段：</h5><p>vue实例的$el和data都初始化了，但还是挂载之前为虚拟的dom节点。</p>
+<p>说明：当前阶段虚拟Dom已经创建完成，即将开始渲染。在此时也可以对数据进行更改，不会触发updated。</p>
+<h5 id="2-mounted阶段："><a href="#2-mounted阶段：" class="headerlink" title="2) mounted阶段："></a>2) mounted阶段：</h5><p>vue实例挂载完成，data.message成功渲染。</p>
+<p>说明：在当前阶段，真实的Dom挂载完毕，数据完成双向绑定，可以访问到Dom节点，使用$refs属性对Dom进行操作。</p>
+<h4 id="3､更新前-后："><a href="#3､更新前-后：" class="headerlink" title="3､更新前/后："></a><strong>3､更新前/后</strong>：</h4><h5 id="1-beforeUpdate阶段："><a href="#1-beforeUpdate阶段：" class="headerlink" title="1) beforeUpdate阶段："></a>1) beforeUpdate阶段：</h5><p>响应式数据更新时调用，发生在虚拟DOM打补丁之前，适合在更新之前访问现有的DOM，比如手动移除已添加的事件监听器。</p>
+<p>说明：可以在当前阶段进行更改数据，不会造成重渲染。</p>
+<h5 id="2-updated阶段："><a href="#2-updated阶段：" class="headerlink" title="2) updated阶段："></a>2) updated阶段：</h5><p>虚拟DOM重新渲染和打补丁之后调用，组成新的DOM已经更新，避免在这个钩子函数中操作数据，防止死循环。</p>
+<p>说明：当前阶段组件Dom已完成更新。要注意的是避免在此期间更改数据，因为这可能会导致无限循环的更新。</p>
+<h4 id="4､销毁前-后："><a href="#4､销毁前-后：" class="headerlink" title="4､销毁前/后："></a><strong>4､销毁前/后</strong>：</h4><h5 id="1-beforeDestroy阶段："><a href="#1-beforeDestroy阶段：" class="headerlink" title="1) beforeDestroy阶段："></a>1) beforeDestroy阶段：</h5><p>实例销毁前调用，实例还可以用，this能获取到实例，常用于销毁定时器，解绑事件。</p>
+<p>说明：在当前阶段实例完全可以被使用，我们可以在这时进行善后收尾工作，比如清除计时器。</p>
+<h5 id="2-destroyed阶段："><a href="#2-destroyed阶段：" class="headerlink" title="2) destroyed阶段："></a>2) destroyed阶段：</h5><p>实例销毁后调用，调用后所有事件监听器会被移除，所有的子实例都会被销毁。</p>
+<p>说明：当前阶段组件已被拆解，数据绑定被卸除，监听被移出，子实例也统统被销毁。</p>
+<h4 id="补充回答："><a href="#补充回答：" class="headerlink" title="补充回答："></a>补充回答：</h4><p>第一次页面加载时会触发：beforeCreate, created, beforeMount, mounted。</p>
+<ol>
+<li><p> created 实例已经创建完成，因为它是最早触发的原因可以进行一些数据，资源的请求。(服务器渲染支持created方法)</p>
+</li>
+<li><p> mounted 实例已经挂载完成，可以进行一些DOM操作。(接口请求)</p>
+</li>
+</ol>
+<h2 id="源码地址"><a href="#源码地址" class="headerlink" title="源码地址"></a>源码地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/vuejs/vue/blob/dev/src/core/instance/lifecycle.js">https://github.com/vuejs/vue/blob/dev/src/core/instance/lifecycle.js</a></p>
+
+  </article>
+
+  
+    
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>tangyuxian<br>
+    <strong>本文链接：</strong><a href="https://tangyuxian.com/2021/03/02/%E5%89%8D%E7%AB%AF/vue/vue-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" title="https:&#x2F;&#x2F;tangyuxian.com&#x2F;2021&#x2F;03&#x2F;02&#x2F;%E5%89%8D%E7%AB%AF&#x2F;vue&#x2F;vue-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyuxian.com&#x2F;2021&#x2F;03&#x2F;02&#x2F;%E5%89%8D%E7%AB%AF&#x2F;vue&#x2F;vue-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/vue/" rel="tag">vue</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'r5zxC0st0DDjPA9auXzMV7HY-gzGzoHsz',
+        appKey: '3bqCsovpyfTPHUzTHovd3V3V'
+    })
+</script>
+</section>
+  </div>
+</div>
+        <div class="nexmoe-post-right">
+          
+        </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+ <script src="/js/app.js?v=1616081258631"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+  
+
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/xiaomai.model.json"},"display":{"position":"left","width":200,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/250cb4aa.js","daovoice")</script>
+<script>
+  daovoice('init', {
+    app_id: "250cb4aa"
+  });
+  daovoice('update');
+</script>

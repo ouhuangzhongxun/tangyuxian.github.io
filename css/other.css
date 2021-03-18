@@ -27,7 +27,7 @@ article ol li::before {
   color: #e67249;
 }
 #nexmoe-content .nexmoe-post .nexmoe-py .aplayer {
-  background-image: url("https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/background/papa.jpg");
+  background-image: url("https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/background/chichi.jpg");
   background-position: center;
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -35,6 +35,37 @@ article ol li::before {
 #nexmoe-content .nexmoe-post .nexmoe-py p em {
   color: #e67249;
   font-size: 17px;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v a::before {
+  background: #e67249;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v .veditor {
+  background-image: url("https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/background/papa.jpg");
+  background-position: right;
+  background-size: auto 8.75em;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v .vlist .vcard .vhead .vnick {
+  color: #e67249;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v .vlist .vcard .vhead .vnick::before {
+  background: #e67249;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v button {
+  background: #f8e6d8;
+  color: #e67249;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v button:hover {
+  background: #e67249;
+  color: #fff;
+  border-color: #e67249;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v .vcontrol .col-20 a {
+  display: none;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v .info {
+  display: none;
 }
 #nexmoe-content .nexmoe-post .nexmoe-post-copyright a {
   color: #e67249;
@@ -46,6 +77,29 @@ article ol li::before {
 #daodream-container .daodream-launcher {
   right: 60px !important;
   bottom: 60px !important;
+}
+#daodream-container .daodream-powered-by {
+  display: none;
+}
+#daodream-container .daodream-sheet-header {
+  background-image: linear-gradient(0deg, #f8e6d8, #f8e6d8) !important;
+  box-shadow: 0 1px 0 0 #f8e6d8, 0 1px 2px 0 #f8e6d8 !important;
+  color: #e67249;
+}
+#daodream-container .daodream-sheet-header .daodream-sheet-header-generic-title {
+  color: #e67249;
+  font-weight: bold;
+}
+#daodream-container .daodream-composer-textarea textarea {
+  color: #e67249 !important;
+}
+#daodream-container .daodream-composer-textarea textarea:focus {
+  outline: none;
+  border: 1px solid #e67249 !important;
+}
+#daodream-container .daodream-composer-send-button {
+  background-image: linear-gradient(180deg, #e67249, #e67249) !important;
+  background: #e67249 !important;
 }
 #daodream-container .daodream-launcher-button {
   width: 80px !important;

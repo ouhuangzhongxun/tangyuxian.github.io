@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <title>css-那些你常用又记不住的css - 糖羽仙</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="这是一个个人小网站">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg" type="image/png" />
+  <meta name="description" content="记录一些常用Css效果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-那些你常用又记不住的css">
+<meta property="og:url" content="https://tangyuxian.com/2021/03/18/%E5%89%8D%E7%AB%AF/css/css-%E9%82%A3%E4%BA%9B%E4%BD%A0%E5%B8%B8%E7%94%A8%E5%8F%88%E8%AE%B0%E4%B8%8D%E4%BD%8F%E7%9A%84css/index.html">
+<meta property="og:site_name" content="糖羽仙">
+<meta property="og:description" content="记录一些常用Css效果">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-18T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-03-18T13:21:07.402Z">
+<meta property="article:author" content="tangyuxian">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_siu3l2dt15k.css">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1616081258611">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/background/xiaomai.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="tangyuxian" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg" alt="tangyuxian"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="tangyuxian">
+            <img src="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg" alt="tangyuxian" alt="tangyuxian">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>21</div>
+        <div><span>标签</span>8</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-meishi"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-hanbao1"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于糖糖">
+            <i class="mdui-list-item-icon nexmoefont icon-jiubei1"></i>
+            <div class="mdui-list-item-content">
+                关于糖糖
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/friend.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-cola"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:tangyuxian.com" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://github.com/tangyuxian/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/前端/">前端</a>
+          <span class="category-list-count">19</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/开发工具/">开发工具</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/服务器端/">服务器端</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/JavaScript/" style="font-size: 16.67px;">JavaScript</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 13.33px;">微信小程序</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">21</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 tangyuxian
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/tangyuxian/hexo-theme-nexmoe" target="_blank">Nexmoe</a><br/>
+        <a href="http://beian.miit.gov.cn" target="_blank">辽ICP备2021002341号-1</a><br/>
+        <div style="font-size: 12px">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            本站总访问量  <a id="busuanzi_value_site_pv"></a> 次<br />
+            本站访客数<a id="busuanzi_value_site_uv"></a>人次
+        </div>
+        
+    </div>
+
+</div><!-- .nexmoe-drawer -->
+
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 26.666666666666668%;"> 
+          <img data-src="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/post/css.jpg" data-sizes="auto" alt="css-那些你常用又记不住的css" class="lazyload">
+          <h1>css-那些你常用又记不住的css</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2021年03月18日</a>
+    <a><i class="nexmoefont icon-areachart"></i>445 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+  </div>
+
+  <article>
+    <p>记录一些常用Css效果</p>
+<span id="more"></span>
+
+<h2 id="一、设置input-的placeholder的字体样式"><a href="#一、设置input-的placeholder的字体样式" class="headerlink" title="一、设置input 的placeholder的字体样式"></a>一、设置input 的placeholder的字体样式</h2><pre><code class="less">input::-webkit-input-placeholder &#123;    /* Chrome/Opera/Safari */
+    color: red;
+&#125;
+input::-moz-placeholder &#123; /* Firefox 19+ */  
+    color: red;
+&#125;
+input:-ms-input-placeholder &#123; /* IE 10+ */
+    color: red;
+&#125;
+input:-moz-placeholder &#123; /* Firefox 18- */
+    color: red;
+&#125;
+</code></pre>
+<h4 id="设置input聚焦时的样式"><a href="#设置input聚焦时的样式" class="headerlink" title="设置input聚焦时的样式"></a>设置input聚焦时的样式</h4><pre><code class="css">input:focus &#123;   
+    background-color: red;
+&#125;
+</code></pre>
+<h4 id="取消input的边框"><a href="#取消input的边框" class="headerlink" title="取消input的边框"></a>取消input的边框</h4><pre><code class="css">input &#123;
+    border: none;
+    outline: none;
+&#125;
+</code></pre>
+<h2 id="二、隐藏滚动条或更改滚动条样式"><a href="#二、隐藏滚动条或更改滚动条样式" class="headerlink" title="二、隐藏滚动条或更改滚动条样式"></a>二、隐藏滚动条或更改滚动条样式</h2><pre><code class="css">/*css主要部分的样式*//*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar &#123;
+    width: 10px; /*对垂直流动条有效*/
+    height: 10px; /*对水平流动条有效*/
+&#125;
+
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track&#123;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rosybrown;
+    border-radius: 3px;
+&#125;
+
+/*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb&#123; 
+    border-radius: 7px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #E8E8E8;
+&#125;
+
+/*定义两端按钮的样式*/
+::-webkit-scrollbar-button &#123;
+    background-color:cyan;
+&#125;
+
+/*定义右下角汇合处的样式*/
+::-webkit-scrollbar-corner &#123;
+    background:khaki;
+&#125;
+</code></pre>
+<h2 id="三、文字超出隐藏并显示省略号"><a href="#三、文字超出隐藏并显示省略号" class="headerlink" title="三、文字超出隐藏并显示省略号"></a>三、文字超出隐藏并显示省略号</h2><h4 id="单行（一定要有宽度）"><a href="#单行（一定要有宽度）" class="headerlink" title="单行（一定要有宽度）"></a>单行（一定要有宽度）</h4><pre><code class="css">p &#123;
+    width:200rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+&#125;
+</code></pre>
+<h4 id="多行"><a href="#多行" class="headerlink" title="多行"></a>多行</h4><pre><code class="css">p &#123;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+&#125;
+</code></pre>
+<h2 id="四、控制div内的元素自动换行"><a href="#四、控制div内的元素自动换行" class="headerlink" title="四、控制div内的元素自动换行"></a>四、控制div内的元素自动换行</h2><pre><code class="css">div &#123;
+    word-wrap: break-word;
+    word-break：break-all;
+&#125;
+</code></pre>
+<h2 id="五、-纯css画三角形"><a href="#五、-纯css画三角形" class="headerlink" title="五、 纯css画三角形"></a>五、 纯css画三角形</h2><pre><code class="css">#demo &#123;
+    width: 0;
+    height: 0;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+&#125;
+</code></pre>
+<h2 id="六、-绝对定位元素居中（水平和垂直方向）"><a href="#六、-绝对定位元素居中（水平和垂直方向）" class="headerlink" title="六、 绝对定位元素居中（水平和垂直方向）"></a>六、 绝对定位元素居中（水平和垂直方向）</h2><pre><code class="css">#demo &#123;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: green;
+&#125;
+</code></pre>
+<h2 id="七、表格边框合并"><a href="#七、表格边框合并" class="headerlink" title="七、表格边框合并"></a>七、表格边框合并</h2><pre><code class="css">table,tr,td&#123;
+    border: 1px solid #333;
+&#125;
+table&#123;
+  border-collapse: collapse;
+&#125;
+</code></pre>
+<hr>
+<p>参考文档:<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/228168219">知乎专栏:那些你常用又记不住的css:</a></p>
+
+  </article>
+
+  
+    
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>tangyuxian<br>
+    <strong>本文链接：</strong><a href="https://tangyuxian.com/2021/03/18/%E5%89%8D%E7%AB%AF/css/css-%E9%82%A3%E4%BA%9B%E4%BD%A0%E5%B8%B8%E7%94%A8%E5%8F%88%E8%AE%B0%E4%B8%8D%E4%BD%8F%E7%9A%84css/" title="https:&#x2F;&#x2F;tangyuxian.com&#x2F;2021&#x2F;03&#x2F;18&#x2F;%E5%89%8D%E7%AB%AF&#x2F;css&#x2F;css-%E9%82%A3%E4%BA%9B%E4%BD%A0%E5%B8%B8%E7%94%A8%E5%8F%88%E8%AE%B0%E4%B8%8D%E4%BD%8F%E7%9A%84css&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyuxian.com&#x2F;2021&#x2F;03&#x2F;18&#x2F;%E5%89%8D%E7%AB%AF&#x2F;css&#x2F;css-%E9%82%A3%E4%BA%9B%E4%BD%A0%E5%B8%B8%E7%94%A8%E5%8F%88%E8%AE%B0%E4%B8%8D%E4%BD%8F%E7%9A%84css&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/css/" rel="tag">css</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'r5zxC0st0DDjPA9auXzMV7HY-gzGzoHsz',
+        appKey: '3bqCsovpyfTPHUzTHovd3V3V'
+    })
+</script>
+</section>
+  </div>
+</div>
+        <div class="nexmoe-post-right">
+          
+        </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+ <script src="/js/app.js?v=1616081258613"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+  
+
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/xiaomai.model.json"},"display":{"position":"left","width":200,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/250cb4aa.js","daovoice")</script>
+<script>
+  daovoice('init', {
+    app_id: "250cb4aa"
+  });
+  daovoice('update');
+</script>
