@@ -1196,13 +1196,127 @@ photos img {
   background-color: rgba(144,144,255,0.15);
   color: #9090ff;
 }
+#nexmoe-background .nexmoe-bg {
+  z-index: -2;
+}
+#nexmoe-background .nexmoe-small {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position-x: -100px;
+}
+#nexmoe-header .nexmoe-count {
+  justify-content: space-between;
+  padding: 0 20px;
+}
+#nexmoe-header .nexmoe-count .nexmoe-count-item {
+  flex: none;
+  width: 60px;
+  padding: 5px 0;
+  background-color: #e67249;
+  transform: rotate(0deg);
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 2px 12px #e67249;
+  position: relative;
+}
+#nexmoe-header .nexmoe-count .nexmoe-count-item .item-radius {
+  position: absolute;
+  left: 5px;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #e67249;
+}
+#nexmoe-header .nexmoe-count .nexmoe-count-item .item-right {
+  left: auto;
+  right: 5px;
+}
+#nexmoe-header .nexmoe-count .nexmoe-count-item span {
+  color: #fff;
+}
 #nexmoe-header .nexmoe-list .nexmoe-list-item.active {
   background-color: #e67249;
-  box-shadow: 0 2px 12px #f8e6d8;
+  box-shadow: 0 2px 12px #e67249;
+}
+#nexmoe-header .nexmoe-search input {
+  width: 100%;
+}
+#nexmoe-header #local-search-result .search-result-list {
+  position: absolute;
+  z-index: 33;
+  top: 48px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  box-shadow: 0 19px 40px #e67249;
+  border-top: 1px solid #fff;
+  animation: anim 0.5s;
+}
+#nexmoe-header #local-search-result .search-result-list .search-result-list-item {
+  box-sizing: border-box;
+  padding: 15px 0;
+  margin: 0 10px;
+  border-bottom: 1px solid #ccc;
+}
+#nexmoe-header #local-search-result .search-result-list .search-result-list-item:last-child {
+  border-bottom: 0;
+}
+#nexmoe-header #local-search-result .search-result-list .search-result-list-item a {
+  color: #333;
+}
+#nexmoe-header #local-search-result .search-result-list .search-result-list-item a:hover {
+  color: #e67249;
+}
+@-moz-keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#nexmoe-header .nexmoe-widget-wrap {
+  position: relative;
+  overflow: inherit;
 }
 #nexmoe-header .nexmoe-widget-wrap .nexmoe-widget .category-list-count {
   color: #e67249;
   background-color: #f8e6d8;
+}
+#nexmoe-header .nexmoe-widget-wrap .nexmoe-widget .archive-list-count {
+  color: #e67249;
 }
 #nexmoe-header .nexmoe-copyright a {
   color: #e67249;
@@ -1212,6 +1326,7 @@ article a {
 }
 article h2:after {
   background: #e67249;
+  box-shadow: 0 2px 12px #e67249;
 }
 article ol li::before {
   color: #e67249;
@@ -1299,6 +1414,33 @@ article ol li::before {
   background-image: linear-gradient(180deg, #e67249, #e67249) !important;
   background: #e67249 !important;
 }
+#daodream-container .daodream-conversations-item-user-avatar {
+  background-color: #e67249 !important;
+}
+#daodream-container .daodream-conversations-new-conversation-button {
+  background-image: linear-gradient(180deg, #e67249, #e67249) !important;
+  background: #e67249 !important;
+}
+#daodream-container .daodream-comment-card .notification-input {
+  border: 1px solid #e67249 !important;
+}
+#daodream-container .daodream-comment-card .notification-submit {
+  background-color: #e67249 !important;
+}
+#daodream-container .daodream-comment-card .daodream-comment-avatar {
+  content: url("https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg") !important;
+}
+#daodream-container .daodream-comment-by-user .daodream-comment-body-container {
+  background-color: #e67249 !important;
+}
+#daodream-container .daodream-comment-by-user .daodream-comment-caret:before {
+  background-color: #e67249 !important;
+}
+#daodream-container .daodream-sheet-spinner {
+  border-radius: 50% !important;
+  overflow: hidden;
+  background-image: url("https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/call.jpg") !important;
+}
 #daodream-container .daodream-launcher-button {
   width: 80px !important;
   height: 80px !important;
@@ -1366,6 +1508,9 @@ article ol li::before {
 }
 @media screen and (max-width: 1024px) {
   .live2d-widget-container {
+    display: none;
+  }
+  #nexmoe-background .nexmoe-small {
     display: none;
   }
   #daodream-container .daodream-launcher {
